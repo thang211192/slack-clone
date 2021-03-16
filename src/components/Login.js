@@ -12,7 +12,7 @@ function Login() {
             <LoginInnerContainer>
                 <img
                 alt=""
-                src="http://assets.stickpng.com/images/5cb480cd5f1b6d3fbadece79.png"
+                src="https://static.surveysparrow.com/site/assets/integrations/inner/slack.png"
                 />
                 <h1>Sign in to the vanThang</h1>
                 <p>vanThang.slack.com</p>

@@ -1,27 +1,27 @@
-import React from 'react';
-import styled from 'styled-components';
-import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
-import CreateIcon from '@material-ui/icons/Create';
-import SideBarOption from './SideBarOption';
-import InsertCommentIcon from '@material-ui/icons/InsertComment';
-import InboxIcon from '@material-ui/icons/Inbox';
-import DraftsIcon from '@material-ui/icons/Drafts';
-import BookmarkBorderIcon from '@material-ui/icons/BookmarkBorder';
-import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
+import AddIcon from '@material-ui/icons/Add';
 import AppsIcon from '@material-ui/icons/Apps';
-import FileCopyIcon from '@material-ui/icons/FileCopy';
+import BookmarkBorderIcon from '@material-ui/icons/BookmarkBorder';
+import CreateIcon from '@material-ui/icons/Create';
+import DraftsIcon from '@material-ui/icons/Drafts';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import AddIcon from '@material-ui/icons/Add';
-import db, { auth } from '../firebase';
-import { useCollection } from 'react-firebase-hooks/firestore';
+import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
+import FileCopyIcon from '@material-ui/icons/FileCopy';
+import InboxIcon from '@material-ui/icons/Inbox';
+import InsertCommentIcon from '@material-ui/icons/InsertComment';
+import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
+import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useCollection } from 'react-firebase-hooks/firestore';
+import styled from 'styled-components';
+import db, { auth } from '../firebase';
+import SideBarOption from './SideBarOption';
 
 
 
 function SideBar() {
     const [user] = useAuthState(auth);
-    const [channels, loading, error] = useCollection(
+    const [channels] = useCollection(
         db.collection('rooms'));
 
     return (
